@@ -1,0 +1,32 @@
+/* Riya Kumar
+ * rk2846
+ * DegreeConverter.java - This program converts temperature values between Fahrenheit and Celsius
+*/
+
+import java.util.Scanner;
+import java.util.*;
+public class DegreeConverter {
+
+public static void main(String[] args) {
+
+	Scanner key=new Scanner (System.in);
+	//user is asked to choose to convert Fahrenheit to Celsius or vice versa 
+	System.out.println("If you would like to convert from Fahrenheit to Celsius enter 1 or else enter 2.");
+	int CHOICE= key.nextInt();
+	System.out.println("Please enter the value to be converted. Decimal values are permitted”);
+        double VAL= key.nextDouble();
+	
+	//if statement used to check the users input 
+        if (CHOICE==1)
+	{
+            double CELSIUS = (5.0/9.0)*(VAL-32); //mathematical formula to convert from Fahrenheit to Celsius
+            System.out.println("Temperature in celsius degrees: "+(Math.round(CELSIUS*100.0)/100.0));
+	}
+        else 
+	{
+            double FAHRENHEIT= 9.0/5.0*VAL+32; ////mathematical formula to convert from Celsius to Fahrenheit 
+            System.out.println("Temperature in Fahrenheit degrees: "+(Math.round(FAHRENHEIT*100.0)/100.0));
+  	}
+   }
+}
+
